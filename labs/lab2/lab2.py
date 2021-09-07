@@ -1,6 +1,8 @@
 """
 Name: Lesly Endara
 lab2.py
+
+problem: working with loops
 """
 import math
 
