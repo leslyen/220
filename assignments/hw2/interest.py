@@ -23,7 +23,7 @@ def main():
     daily = calc_three / number_of_days
     percentage = (interest_rate / 12) / 100
     monthly_interest = daily * percentage
-    print("your monthly interest rate is", monthly_interest)
+    print("your monthly interest rate is", round(monthly_interest, 2))
 
 
 
