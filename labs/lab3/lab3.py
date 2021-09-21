@@ -47,13 +47,15 @@ def sequence():
 
 def pi():
     series = eval(input("input a number for n: "))
-    even = 2
+    even = 0
     odd = 1
     for seq in range(0, series):
         remainder = seq % 2
         odd_remainder = seq % 1
         even = even + (remainder * 2)
         odd = odd + (remainder * 2)
-        print(even, end="")
+        print(even, "/", end="")
+        print(odd, end="")
+        print(" ")
         # end for loop
         # tried, will keep trying later.

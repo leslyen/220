@@ -1,10 +1,14 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Lesly Endara
+
+lab4.py
+
+certification of Authenticity:
+I certify that this is entirely my own work, worked with Jessica, Katie
 """
 
+from math import *
 from graphics import *
-
 
 def squares():
     """  <---  You can use tripled quotes to write a multi-line comment....
@@ -30,11 +34,11 @@ def squares():
 
     # create a space to instruct user
     inst_pt = Point(width / 2, height - 10)
-    instructions = Text(inst_pt, "Click to move circle")
+    instructions = Text(inst_pt, "Click to move square")
     instructions.draw(win)
 
     # builds a circle
-    shape = Circle(Point(50, 50), 20)
+    shape = Rectangle(Point(100, 120), Point(150, 170))
     shape.setOutline("red")
     shape.setFill("red")
     shape.draw(win)
@@ -48,7 +52,12 @@ def squares():
         # point where the user clicked
         dx = p.getX() - c.getX()
         dy = p.getY() - c.getY()
+        shapeCopy = shape.clone()
         shape.move(dx, dy)
+        shapeCopy.draw(win)
+    instructions.undraw()
+    leave = Text(inst_pt, "Click again to quit")
+    leave.draw(win)
 
     win.getMouse()
     win.close()
@@ -62,14 +71,75 @@ def rectangle():
          Print the perimeter and area of the rectangle.
     Formulas: area = (length)(width)   and    perimeter = 2(length+width)
     """
-    pass
 
+    window = GraphWin("rectangle", 400, 400)
+    message = Text(Point(200, 300), "select two points for your rectangle")
+    message.draw(window)
+
+    point1 = window.getMouse()
+    point1.draw(window)
+    point2 = window.getMouse()
+    point2.draw(window)
+    rect = Rectangle(point1, point2)
+    rect.setFill("pink")
+    rect.draw(window)
+
+    # calculate
+    point1_x = point1.getX()
+    point1_y = point1.getY()
+    point2_x = point2.getX()
+    point2_y = point2.getY()
+
+    width = abs(point2_x) - abs(point1_x)
+    height = abs(point2_y) - abs(point1_y)
+
+    # area
+    area = width * height
+
+    # perimeter
+    perimeter = 2 * (width + height)
+    print("area:", area)
+    print("perimeter:", perimeter)
+
+    message.setText("click to close")
+    window.getMouse()
+    window.close()
+
+
+def circle():
+    window = GraphWin("circle", 400, 400)
+    message = Text(Point(200, 300), "select two points to make a circle")
+    message.draw(window)
+
+    pointa = window.getMouse()
+    pointb = window.getMouse()
+
+    center_x = pointa.getX()
+    center_y = pointa.getY()
+    edge_x = pointb.getX()
+    edge_y = pointb.getY()
+    # radius
+    parenthesis1 = (edge_x - center_x) ** 2
+    parenthesis2 = (edge_y - center_y) ** 2
+    addition = parenthesis1 + parenthesis2
+    radius = sqrt(addition)
+
+    circle_ = Circle(pointa, radius)
+    circle_.draw(window)
+    words = Text(Point(200, 100), radius)
+    words.draw(window)
+    message.setText("click to close")
+    window.getMouse()
+    window.close()
+
+# def pi2():
+    # lab ended
 
 def main():
     squares()
-    # rectangle()
-    # circle()
-    # pi2()
+    rectangle()
+    circle()
+    pi2()
 
 
 main()

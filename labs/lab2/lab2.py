@@ -11,13 +11,13 @@ def sum_of_threes():
     upper = eval(input("Input an upper bound:"))
     solution = 0
     for bound in range(3, upper + 1, 3):
-        solution = bound
+        solution = solution + 1
         print(solution)
         # end for
 
 
 def muliplication_table():
-    print("1 2 3 4 5 6 7 8 9 10")
+    print("1 2 3 4 5 6 7 8 9 10:")
     solution = 0
     for one in range(1, 11, 1):
         solution = one
@@ -55,7 +55,7 @@ def muliplication_table():
         solution = nine
         print(solution, end=" ")
     print("")
-    for ten in range(9, 101, 10):
+    for ten in range(10, 101, 10):
         solution = ten
         print(solution, end=" ")
     print("")
@@ -89,4 +89,5 @@ def power():
         solution = solution * base
     print(base, "^", elevated, "=", solution)
 
+muliplication_table()
 power()
