@@ -139,7 +139,7 @@ def main():
     squares()
     rectangle()
     circle()
-    pi2()
+    #pi2()
 
 
 main()
