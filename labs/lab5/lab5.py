@@ -156,7 +156,7 @@ def process_string():
     for number in range(count):
         print(word[letter])
         letter = letter + 1
-    print(len[word])
+    print(count)
 
 def process_list():
     pt = Point(5, 10)
