@@ -4,7 +4,7 @@ Name: Lesly Endara
 lab5.py
 
 certification of Authenticity:
-I certify that this is entirely my own work, worked with Jessica, Katie
+I certify that this is entirely my own work, worked with
 """
 import gettext
 
@@ -180,9 +180,9 @@ def process_list():
 
 def main():
     # target()
-    #triangle()
-    #color_shape()
-    #process_string()
+    triangle()
+    color_shape()
+    process_string()
     process_list()
     pass
 
