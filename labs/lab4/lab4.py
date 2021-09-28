@@ -132,14 +132,12 @@ def circle():
     window.getMouse()
     window.close()
 
-# def pi2():
-    # lab ended
 
 def main():
     squares()
     rectangle()
     circle()
-    #pi2()
+    # pi2()
 
 
 main()
