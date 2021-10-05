@@ -30,7 +30,7 @@ def main():
     message.setSize(20)
     message.setFace("courier")
     message.draw(win)
-    time.sleep(4)
+    time.sleep(2)
     message.undraw()
 
     # arrow
