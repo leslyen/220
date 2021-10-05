@@ -4,7 +4,7 @@ Name: Lesly Endara
 lab5.py
 
 certification of Authenticity:
-I certify that this is entirely my own work, worked with
+I certify that this is entirely my own work
 """
 import gettext
 
@@ -158,6 +158,7 @@ def process_string():
         letter = letter + 1
     print(count)
 
+
 def process_list():
     pt = Point(5, 10)
     values = [5, "hi", 2.5, "there", pt,"7.2"]
@@ -177,6 +178,7 @@ def process_list():
     print(x)
     x = len(values)
     print(x)
+
 
 def main():
     # target()

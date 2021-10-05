@@ -31,8 +31,7 @@ def main():
     print("Total number of vehicles traveled on all roads: ", total)
     print("Average number of vehicles per road: ", round(total_average, 2))
 
-
-
 if __name__ == "__main__":
         main()
+
 
