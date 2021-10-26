@@ -66,6 +66,7 @@ def send_safe_message(file, friend, key):
     outfile.close()
     return
 
+
 # def send_uncrackable_message(file, friend, pad):
 
 
