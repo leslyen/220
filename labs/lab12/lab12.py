@@ -4,6 +4,7 @@ lab12.py
 certification of Authenticity:
 I certify that this is entirely my own work
 """
+
 import algorithms
 from random import randint
 
